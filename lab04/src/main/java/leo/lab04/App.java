@@ -65,6 +65,7 @@ public class App extends Application {
         gridPane.add(calculate, 1, 8);
         
         Scene scene = new Scene(gridPane, 600, 400);
+        stage.setTitle("Business Trip");
         stage.setScene(scene);
         stage.show();
     }
