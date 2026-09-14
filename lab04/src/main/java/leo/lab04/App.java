@@ -3,6 +3,8 @@
 package leo.lab04;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -61,13 +63,22 @@ public class App extends Application {
         gridPane.add(lodgingCharges, 0, 7);
         gridPane.add(lodgingChargesTxt, 1, 7); 
         
-        Button calculate = new Button("Calculate");
-        gridPane.add(calculate, 1, 8);
+        Button calculateBtn = new Button("Calculate");
+        gridPane.add(calculateBtn, 1, 8);
         
+   
         Scene scene = new Scene(gridPane, 600, 400);
         stage.setTitle("Business Trip");
         stage.setScene(scene);
         stage.show();
+    }
+    
+    class ButtonClickHandler implements EventHandler<ActionEvent> {
+        
+     @Override
+     public void handle(ActionEvent event) {
+        System.out.println("Button clicked!");
+        }
     }
 
     public static void main(String[] args) {
