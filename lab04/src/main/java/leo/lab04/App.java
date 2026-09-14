@@ -89,7 +89,19 @@ public class App extends Application {
                     + " businessperson: $" + expenses);
             gridPane.add(calcExpenses, 1, 9);
             
+            // Company reimburses
+            int paidMeals = input1 * 37;
+            double paidParkingFees = input1 * 10.00;
+            double paidTaxiCharges = input1 * 20.00;
+            double paidLodgingCharges = input1 * 95.00;
+            double paidPrivateVehicle = input4 * 0.27;
             
+            double companyReimbursement = paidMeals + paidParkingFees +
+                    paidTaxiCharges + paidLodgingCharges + paidPrivateVehicle;
+                        
+            Label companyExpenses = new Label("The total allowable expenses for"
+                    + " the trip: $" + companyReimbursement);
+            gridPane.add(companyExpenses, 1, 10);
         });
         
         Scene scene = new Scene(gridPane, 600, 400);
