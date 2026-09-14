@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -16,6 +17,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
+        GridPane gridPane = new GridPane();
+        
         Label daysOnTrip = new Label("Number of days on the trip: ");
         Label amountOfAirfare = new Label("Amount of airfare, if any: ");
         Label amountCarRentalFees = new Label("Amount of car rental fees, if any: ");
@@ -24,6 +27,11 @@ public class App extends Application {
         Label taxiCharges = new Label("Amount of taxi charges, if any: ");
         Label conferenceFees = new Label("Conference or seminar registration fees, if any: ");
         Label lodgingCharges = new Label("Lodging charges, per night: ");
+        
+ 
+        Scene scene = new Scene(gridPane);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) {
