@@ -68,7 +68,23 @@ public class App extends Application {
         
         calculateBtn.setOnAction(event -> 
         {
+            int input1 = Integer.parseInt(daysOnTripTxt.getText());
+            double input2 = Double.parseDouble(amountOfAirfareTxt.getText());
+            double input3 = Integer.parseInt(amountCarRentalFeesTxt.getText());
+            double input4 = Integer.parseInt(numOfMilesTxt.getText());
+            double input5 = Integer.parseInt(parkingFeesTxt.getText());
+            double input6 = Integer.parseInt(taxiChargesTxt.getText());
+            double input7 = Integer.parseInt(conferenceFeesTxt.getText());
+            double input8 = Integer.parseInt(lodgingChargesTxt.getText());
             
+            // Here, the number of days on trip is equal to the number of nights at the lodging
+            double lodgingCost = input1 * input8;
+            
+            double expenses = input2 + input3 + input5 + input6 + input7 +
+                    lodgingCost;
+            
+            Label calcExpenses = new Label("" + expenses);
+            gridPane.add(calcExpenses, 1, 9);
         });
         
         Scene scene = new Scene(gridPane, 600, 400);
