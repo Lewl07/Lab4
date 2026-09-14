@@ -104,11 +104,16 @@ public class App extends Application {
             gridPane.add(companyExpenses, 1, 10);
             
             // Excess that must be paid by the businessman
-            double excess = Math.abs(expenses - companyReimbursement);
-            
+            double excess = expenses - companyReimbursement;
+            if (excess <= 0) {
+                excess = 0;
+            }
+           
             Label excessExpenses = new Label("The excess that must be paid by"
                     + " the businessperson, if any: $" + excess);
             gridPane.add(excessExpenses, 1, 11);
+            
+            
         });
         
         Scene scene = new Scene(gridPane, 600, 400);
