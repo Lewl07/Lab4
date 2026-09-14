@@ -66,21 +66,17 @@ public class App extends Application {
         Button calculateBtn = new Button("Calculate");
         gridPane.add(calculateBtn, 1, 8);
         
-   
+        calculateBtn.setOnAction(event -> 
+        {
+            
+        });
+        
         Scene scene = new Scene(gridPane, 600, 400);
         stage.setTitle("Business Trip");
         stage.setScene(scene);
         stage.show();
     }
     
-    class ButtonClickHandler implements EventHandler<ActionEvent> {
-        
-     @Override
-     public void handle(ActionEvent event) {
-        System.out.println("Button clicked!");
-        }
-    }
-
     public static void main(String[] args) {
         launch();
     }
