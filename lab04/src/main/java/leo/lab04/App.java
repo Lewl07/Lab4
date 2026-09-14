@@ -113,7 +113,13 @@ public class App extends Application {
                     + " the businessperson, if any: $" + excess);
             gridPane.add(excessExpenses, 1, 11);
             
+            // The amount saved by the businessperson if the expenses are under the total allowed
+            double saved = Math.abs(expenses - companyReimbursement);
             
+            Label savedExpenses = new Label("The amount saved by the"
+                    + " businessperson if the expenses are under"
+                    + " the total allowed: $" + saved);
+            gridPane.add(savedExpenses, 1, 12);
         });
         
         Scene scene = new Scene(gridPane, 600, 400);
