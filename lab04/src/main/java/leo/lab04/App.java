@@ -3,6 +3,7 @@ package leo.lab04;
 import java.util.Scanner;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -59,7 +60,10 @@ public class App extends Application {
         gridPane.add(lodgingCharges, 0, 7);
         gridPane.add(lodgingChargesTxt, 1, 7); 
         
-        Scene scene = new Scene(gridPane);
+        Button calculate = new Button("Calculate");
+        gridPane.add(calculate, 1, 8);
+        
+        Scene scene = new Scene(gridPane, 600, 400);
         stage.setScene(scene);
         stage.show();
     }
