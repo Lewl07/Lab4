@@ -102,6 +102,13 @@ public class App extends Application {
             Label companyExpenses = new Label("The total allowable expenses for"
                     + " the trip: $" + companyReimbursement);
             gridPane.add(companyExpenses, 1, 10);
+            
+            // Excess that must be paid by the businessman
+            double excess = Math.abs(expenses - companyReimbursement);
+            
+            Label excessExpenses = new Label("The excess that must be paid by"
+                    + " the businessperson, if any: $" + excess);
+            gridPane.add(excessExpenses, 1, 11);
         });
         
         Scene scene = new Scene(gridPane, 600, 400);
