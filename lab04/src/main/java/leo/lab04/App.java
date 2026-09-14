@@ -77,14 +77,19 @@ public class App extends Application {
             double input7 = Integer.parseInt(conferenceFeesTxt.getText());
             double input8 = Integer.parseInt(lodgingChargesTxt.getText());
             
-            // Here, the number of days on trip is equal to the number of nights at the lodging
+            // Here, the number of days on trip is equal to the number of nights
+            // at the lodging
             double lodgingCost = input1 * input8;
             
             double expenses = input2 + input3 + input5 + input6 + input7 +
                     lodgingCost;
             
-            Label calcExpenses = new Label("" + expenses);
+            // Total expenses incurred by the businessperson
+            Label calcExpenses = new Label("Total expenses incurred by the"
+                    + " businessperson: $" + expenses);
             gridPane.add(calcExpenses, 1, 9);
+            
+            
         });
         
         Scene scene = new Scene(gridPane, 600, 400);
